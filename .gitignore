@@ -1,0 +1,5 @@
+# Ignore dotfiles, except git related
+.*
+!.git*
+
+node_modules

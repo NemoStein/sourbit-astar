@@ -1,0 +1,9 @@
+{
+  "name": "@sourbit/astar",
+  "version": "0.1.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "author": "NemoStein <contato@nemostein.com.br> (http://nemostein.com.br)",
+  "license": "CC0"
+}
