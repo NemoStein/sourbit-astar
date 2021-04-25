@@ -204,14 +204,11 @@ export class DirectedGraph {
         const node = this.add()
         nodes[index] = node
 
-        if (x - 1 >= 0) {
-          const neighbor = (x - 1) + y * width
-          this.connect(node, nodes[neighbor], costs[neighbor])
-          this.connect(nodes[neighbor], node, costs[index])
-        }
+        const neighbors = []
+        if (x - 1 >= 0) neighbors.push((x - 1) + y * width)
+        if (y - 1 >= 0) neighbors.push(x + (y - 1) * width)
 
-        if (y - 1 >= 0) {
-          const neighbor = x + (y - 1) * width
+        for (const neighbor of neighbors) {
           this.connect(node, nodes[neighbor], costs[neighbor])
           this.connect(nodes[neighbor], node, costs[index])
         }
